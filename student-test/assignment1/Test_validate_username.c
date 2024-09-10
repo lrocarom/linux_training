@@ -1,4 +1,5 @@
 #include "unity.h"
+#include <string.h> // for strcmp
 #include <stdbool.h>
 #include <stdlib.h>
 #include "../../examples/autotest-validate/autotest-validate.h"
@@ -18,5 +19,5 @@ void test_validate_my_username()
      * TODO: Replace the line below with your code here as described above to verify your /conf/username.txt 
      * config file and my_username() functions are setup properly
      */
-    TEST_ASSERT_TRUE_MESSAGE(false,"AESD students, please fix me!");
+    TEST_ASSERT_TRUE_MESSAGE(strcmp(malloc_username_from_conf_file(),my_username()) == 0,"Values do not match!");
 }
